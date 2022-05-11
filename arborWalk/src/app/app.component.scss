@@ -1,9 +1,29 @@
 
+.title-main {
+  display: flex;
+  font-size: 45px;
+  font-weight: bolder;
+  padding: 20px;
+}
+
 .title-bar {
   display: flex;
   justify-content: center;
   align-content: center;
   min-height: 2rem;
+  color: white;
+  background: linear-gradient(270deg, #2848B1 0%, #114A15 100%);
+  box-shadow: 0px 10px 12px -8px rgba(0,0,0,0.75);
+}
+
+.menu-bar {
+  display: flex;
+  margin-top: 5px;
+  position: sticky;
+  position: -webkit-sticky; /* For macOS/iOS Safari */
+  top: 0; /* Sets the sticky toolbar to be on top */
+  z-index: 1000;
+  box-shadow: 0px 10px 12px -8px rgba(0,0,0,0.75);
 }
 
 .example-spacer {
@@ -11,7 +31,20 @@
 }
 
 .example-icon {
-  border: 0px solid red !important;
   padding: 10px;
+  cursor: pointer;
+}
+
+.icon-menu {
+}
+
+.body-image {
+  display: flex;
+  width: 100%;
+  margin-top: 4px;
+}
+
+.menu-title-text {
+  padding: 0 20px;
   cursor: pointer;
 }
