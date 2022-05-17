@@ -3,3 +3,33 @@
   justify-content: center;
   align-content: center;
 }
+
+.sign-in-box {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  border: 1px solid black;
+  flex-direction: column;
+  min-width: 20rem;
+}
+
+.container-links {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+}
+
+.navbar-brand {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.info-container {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  padding: 1rem;
+}
