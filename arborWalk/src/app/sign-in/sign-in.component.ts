@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { CognitoService, IUser } from '../services/cognito/cognito.service';
 
@@ -8,15 +8,24 @@ import { CognitoService, IUser } from '../services/cognito/cognito.service';
   templateUrl: './sign-in.component.html',
   styleUrls: ['./sign-in.component.scss'],
 })
-export class SignInComponent {
+export class SignInComponent implements OnInit{
 
   loading: boolean;
   user: IUser;
+  isAuthenticated: boolean;
 
   constructor(private router: Router,
               private cognitoService: CognitoService) {
     this.loading = false;
     this.user = {} as IUser;
+    this.isAuthenticated = false;
+  }
+
+  public ngOnInit(): void {
+    this.cognitoService.isAuthenticated()
+      .then((success: boolean) => {
+        this.isAuthenticated = success;
+      });
   }
 
   public signIn(): void {
@@ -27,5 +36,12 @@ export class SignInComponent {
       }).catch(() => {
       this.loading = false;
     });
+  }
+
+  public signOut(): void {
+    this.cognitoService.signOut()
+      .then(() => {
+        this.router.navigate(['/signIn']);
+      });
   }
 }
