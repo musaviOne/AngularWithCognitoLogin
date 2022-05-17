@@ -26,6 +26,7 @@ export class SignUpComponent implements OnInit {
 
   public signUp(): void {
     this.loading = true;
+    this.user.email = this.user.email;
     this.cognitoService.signUp(this.user)
       .then(() => {
         this.loading = false;
