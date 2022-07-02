@@ -1,9 +1,17 @@
+.main-container {
+  display: flex;
+  flex-direction: column;
+  background-size: cover;
+}
 
 .title-main {
   display: flex;
-  font-size: 45px;
-  font-weight: bolder;
-  padding: 20px;
+  flex-shrink: 1;
+  font-size: 3rem;
+  font-weight: bold;
+  padding: 1rem;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .title-bar {
@@ -11,9 +19,18 @@
   justify-content: center;
   align-content: center;
   min-height: 2rem;
-  color: white;
-  background: linear-gradient(270deg, #2848B1 0%, #114A15 100%);
+  color: rgb(255, 255, 255);
+  background: linear-gradient(270deg, #ffffff 10%, #114A15 100%);
   box-shadow: 0px 10px 12px -8px rgba(0,0,0,0.75);
+  border: 2px solid #114A15;
+  border-right: 3px;
+  overflow: scroll;
+
+  &:hover {
+    background: linear-gradient(270deg, #114A15 0%, #2848B1 100%);
+    color: rgba(255, 255, 255, .5);
+    cursor: pointer;
+  }
 }
 
 .menu-bar {
@@ -24,15 +41,21 @@
   top: 0; /* Sets the sticky toolbar to be on top */
   z-index: 1000;
   box-shadow: 0px 10px 12px -8px rgba(0,0,0,0.75);
+  overflow: scroll;
 }
 
 .example-spacer {
   flex: 1 1 auto;
 }
 
-.example-icon {
+.nav-icon {
   padding: 10px;
   cursor: pointer;
+
+   &:hover {
+     color: rgba(41,41,141,.37);
+
+   }
 }
 
 .icon-menu {
@@ -47,4 +70,9 @@
 .menu-title-text {
   padding: 0 20px;
   cursor: pointer;
+}
+
+.mat-toolbar {
+  background: #f5f5f5;
+  color: rgba(41,41,141,.87)!important;
 }
