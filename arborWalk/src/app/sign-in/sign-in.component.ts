@@ -13,6 +13,7 @@ export class SignInComponent implements OnInit{
   loading: boolean;
   user: IUser;
   isAuthenticated: boolean;
+  showPassword = false;
 
   constructor(private router: Router,
               private cognitoService: CognitoService) {
@@ -43,5 +44,9 @@ export class SignInComponent implements OnInit{
       .then(() => {
         this.router.navigate(['/signIn']);
       });
+  }
+
+  hidePassword() {
+    this.showPassword = !this.showPassword;
   }
 }
