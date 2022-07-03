@@ -2,7 +2,7 @@
   <div class="title-bar">
     <div class="title-main">ARBOR WALK COMMUNITY</div>
   </div>
-  <div>
+  <div class="menu-bar-container">
     <mat-toolbar fxLayout="row" class="menu-bar">
       <div class="nav-icon" aria-label="Example icon-button with menu icon">
         <div>
@@ -14,8 +14,12 @@
       <div class="menu-title-text">Policies</div>
       <div class="menu-title-text">Contact US</div>
       <span class="example-spacer"></span>
-      <div class="nav-icon favorite-icon" aria-label="Example icon-button with heart icon">
-        <mat-icon>login</mat-icon>
+      <div class="nav-icon favorite-icon"
+           routerLink="signIn"
+           aria-label="Example icon-button with heart icon">
+        <mat-icon>
+          login
+        </mat-icon>
       </div>
       <div class="nav-icon favorite-icon" aria-label="Example icon-button with heart icon">
         <mat-icon>favorite</mat-icon>
