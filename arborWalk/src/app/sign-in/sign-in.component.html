@@ -37,13 +37,13 @@
             <div class="info-container">
               <div class="">
                 <div class="">
-                  <label for="email" class="form-label">Email:</label>
+                  <label for="email" class="form-label label-format">Email:</label>
                   <input type="email" id="email" name="email" #email="ngModel" [(ngModel)]="user.email" class="form-control form-control-sm">
                 </div>
               </div>
               <div class="">
                 <div class="">
-                  <label for="password" class="form-label">Password:</label>
+                  <label for="password" class="form-label label-format">Password:</label>
                   <span class="input-group input-group-sm">
                   <input [type]="user.showPassword ? 'text' : 'password'" id="password" name="password" #password="ngModel" [(ngModel)]="user.password" class="form-control form-control-sm">
                   <button type="button" class="btn btn-outline-secondary" (click)="user.showPassword = !user.showPassword">
@@ -54,7 +54,7 @@
                 </div>
               </div>
               <div class="">
-                <div class="">
+                <div class="button-format">
                   <button type="button" (click)="signIn()" class="btn btn-sm btn-success" [disabled]="loading">
                     <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true" *ngIf="loading"></span>
                     Sign in

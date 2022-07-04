@@ -1,0 +1,38 @@
+.sign-in-container {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  height: 400px;
+}
+
+.sign-in-box-container {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.sign-in-box {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  border: 1px solid black;
+  flex-direction: column;
+  min-width: 20rem;
+  margin: auto;
+}
+
+.label-format {
+  display: inline-flex;
+  justify-content: flex-start;
+  align-content: center;
+  width: 100px;
+  padding: 10px;
+}
+
+.button-format {
+  display: inline-flex;
+  justify-content: flex-start;
+  align-content: center;
+  width: 100px;
+  padding: 10px;
+}
