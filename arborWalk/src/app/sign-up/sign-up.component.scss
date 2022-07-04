@@ -1,0 +1,61 @@
+.sign-up-container {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  height: 400px;
+}
+
+.sign-up-box-container {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.sign-up-box {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  border: 1px solid black;
+  flex-direction: column;
+  min-width: 20rem;
+  margin: auto;
+  height: 200px;
+  width: 400px;
+}
+
+.container-links {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+}
+
+.navbar-brand {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.info-container {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.label-format {
+  display: inline-flex;
+  justify-content: flex-start;
+  align-content: center;
+  width: 100px;
+  padding: 10px;
+}
+
+.button-format {
+  display: inline-flex;
+  justify-content: flex-start;
+  align-content: center;
+  width: 100px;
+  padding: 10px;
+}

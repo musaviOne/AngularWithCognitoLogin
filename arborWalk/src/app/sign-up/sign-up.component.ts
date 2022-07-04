@@ -13,6 +13,7 @@ export class SignUpComponent implements OnInit {
   loading: boolean;
   isConfirm: boolean;
   user: IUser;
+  showPassword = false;
 
   constructor(private router: Router,
               private cognitoService: CognitoService) {
@@ -32,7 +33,7 @@ export class SignUpComponent implements OnInit {
         this.loading = false;
         this.isConfirm = true;
       }).catch(() => {
-      this.loading = false;
+        this.loading = false;
     });
   }
 
@@ -44,5 +45,9 @@ export class SignUpComponent implements OnInit {
         }).catch(() => {
           this.loading = false;
         });
-    }
+  }
+
+  hidePassword(): void {
+    this.showPassword = !this.showPassword;
+  }
 }
